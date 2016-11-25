@@ -22,6 +22,7 @@ Requisiti
     a. Implementate i metodi fondamentali nell'entità 'comune'
     b. Implementare, tramite operator<<, la stampa del contenuto di un
     'comune'.
+    
 2. Definire una entità 'comuni' che deve contenere un insieme di oggetti 'comune'.
     Potete appoggiarvi alle classi container della STL per la memorizzazione.
     a. Implementate i metodi fondamentali nell'entità 'comuni'
@@ -29,6 +30,7 @@ Requisiti
     singole entità 'comune'
     c. Implementare, tramite operator<<, la stampa del contenuto di un
     oggetto 'comuni'.
+    
 3. Definire nel main.cpp delle funzioni di lettura del file comuni_prov_mi.csv per
     riempire con le informazioni lette un oggetto 'comuni'.
     a. Separate in due distinte operazioni la lettura: una funzione che legge riga
@@ -36,11 +38,13 @@ Requisiti
     oggetto di tipo 'comune' con le relative informazioni (suggerimento,
     potrebbero servire le seguenti funzioni: std::ifstream, std::stringstream,
     std::getline e atoi.)
+    
 4. Scrivere nel main.cpp una funzione generica find_all_if che, dato una istanza di
     'comuni' riempita e un predicato, ritorna l'insieme delle entità 'comune' che
     soddisfano il predicato. L'insieme è un oggetto di tipo ì'comuni'.
     a. Scrivete diversi predicati (i.e. funtori) da usarsi con la funzione e testateli.
     b. Scrivete dei funtori con stato e senza stato.
+    
 5. Scrivete altre funzioni che manipolino la lista dei comuni usando anche gli
     algoritmi della libreria STL in <algorithm>.
     a. Per questo punto è necessario che l'entità 'comuni' esponga degli iteratori
