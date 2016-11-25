@@ -20,7 +20,7 @@ comuni::~comuni(){
 comuni &comuni::operator=(const comuni &oth){
 	if(this!=&oth){
 		comuni tmp(oth);
-		swap(this->v,tmp->v);
+		swap(this->v,tmp.v);
 	}
 }
 
