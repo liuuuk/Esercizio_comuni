@@ -2,17 +2,10 @@
 #include <string>
 #include <sstream> 
 #include <stdlib.h>
+#include "comune.h"
+#include "comuni.h"
 
-std::string file_by_row(std::ifstream &inf){
-  std::string st ;
-  if(inf.is_open()){
-    std::getline(inf,st);
-    return st;  
-  else{
-    throw("File non aperto");  
-  }
-  //nel caso non sia aperta devo tornare una stringa 
-}
+#include <fstream>
 
 comune &string_to_comune(const std::string &str){
  
@@ -20,7 +13,7 @@ comune &string_to_comune(const std::string &str){
 	std::string s;
 	comune c;
 
- 	ss.str (argv[1]);
+ 	ss.str (str);
 	std::getline(ss, s, ',');
 	c.nome = s;
 
@@ -44,4 +37,31 @@ comune &string_to_comune(const std::string &str){
 	
 
 	return c;
+}
+
+void file_by_row(std::ifstream &stream, comuni &list){
+
+  std::string line;
+
+  while(std::getline(stream, line)){ //Finchè c'è qlcs da leggere
+
+  	comune c;
+  	c = string_to_comune(line); //trasforma la string in comune
+  	list.add_comune(c); //aggiungilo alla lista di comuni
+
+  }
+
+}
+
+
+
+int main(int argc, char const *argv[])
+{
+	std::ifstream infile("thefile.txt");
+
+	comuni list_c; //oggetto comuni
+
+	file_by_row(infile, list_c);
+
+	return 0;
 }

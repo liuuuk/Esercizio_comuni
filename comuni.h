@@ -18,9 +18,10 @@ public:
 
 	comuni &operator= (const comuni &oth);
 	//comuni &operator+ (const comuni &oth);
-
+	
 	comune &operator[](sz_type index);
 	const comune &operator[](sz_type index) const;
+	
 
 	void add_comune(const comune &c);
 	void add_comune(const std::string &n,
@@ -37,16 +38,6 @@ private:
 	std::vector<comune> v;
 };
 
-std::ostream &operator<<(std::ostream &os, const comuni &c){
-
-	std::vector<comune>::iterator i, ie;
-	i = v.begin();
-	ie = v.end();
-
-	for (; i != ie; ++i)
-		os << *v << std::endl;
-
-	return os;
-}
+std::ostream &operator<<(std::ostream &os, const comuni &c);
 
 #endif
