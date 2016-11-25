@@ -13,7 +13,7 @@ std::string string_sep(const std::string &ss){
  
 	std::string s;
 
- 	ss.str ("la, tua, stringa");
+ 	ss.str (ss);
 	
 	std::getline(ss, s, ',');
   return s;
