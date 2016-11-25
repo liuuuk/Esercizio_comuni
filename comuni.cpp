@@ -18,7 +18,10 @@ comuni::~comuni(){
 }
 
 comuni &comuni::operator=(const comuni &oth){
-	//Da implementare
+	if(this!=&oth){
+		comuni tmp(oth);
+		swap(this->v,tmp->v);
+	}
 }
 
 comune &comuni::operator[](sz_type index){
