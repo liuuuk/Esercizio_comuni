@@ -8,3 +8,13 @@ std::string file_by_row(std::ifstream &inf){
   }
   //nel caso non sia aperta devo tornare una stringa 
 }
+
+std::string string_sep(const std::string &ss){
+ 
+	std::string s;
+
+ 	ss.str ("la, tua, stringa");
+	
+	std::getline(ss, s, ',');
+  return s;
+}
